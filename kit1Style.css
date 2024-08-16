@@ -45,11 +45,18 @@ main {
 }
 
 .containerItens, .containerDesc {
-    width: 48%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
+}
+
+.containerItens {
+    width: 70%; /* Aumentado para 70% */
+}
+
+.containerDesc {
+    width: 30%; /* Reduzido para 30% */
 }
 
 .containerItens .card {
@@ -64,9 +71,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    height: 350px;
 }
-
 
 .containerDesc .card {
     width: 100%;
@@ -80,16 +86,24 @@ main {
 .containerDesc p {
     font-size: 1rem;
     color: #333;
+    font-weight: bold;
+}
+
+.containerDesc .preco {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bold;
 }
 
 .containerDesc button {
-    padding: 0.75rem 1.5rem;
+    padding: 1.5rem 4rem;
     background-color: #4bb4ee;
     color: #fff;
     border: none;
-    border-radius: 8px;
+    border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 1.5rem;
 }
 
 .containerDesc button:hover {
