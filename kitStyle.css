@@ -17,6 +17,7 @@ header {
     width: 100%;
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 
 header h1 {
@@ -44,34 +45,15 @@ main {
     justify-content: space-between;
 }
 
-.containerItens, .containerDesc {
+.containerDesc {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
 }
 
-.containerItens {
-    width: 70%; /* Aumentado para 70% */
-}
-
 .containerDesc {
-    width: 30%; /* Reduzido para 30% */
-}
-
-.containerItens .card {
-    width: 45%;
-    margin: 0.5rem;
-}
-
-.containerItens .image-container {
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 350px;
+    width: 30%;
 }
 
 .containerDesc .card {
@@ -141,4 +123,51 @@ a {
 
 a:visited {
     color: inherit;
+}
+
+.carousel {
+    position: relative;
+    width: 45%;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 90%;
+    z-index: 1; 
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 2rem;
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+    background: none;
+}
+
+.carousel:hover button.prev, 
+.carousel:hover button.next {
+    opacity: 1;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
 }
